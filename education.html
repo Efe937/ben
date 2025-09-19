@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eğitim - Portföyüm</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: #f4f4f9;
+        }
+
+        .education-card {
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+            transform: scale(0.9);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .education-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .education-title {
+            animation: slideFromLeft 1s ease-out forwards;
+            color: #0056b3;
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        @keyframes slideFromLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .education-description {
+            opacity: 0;
+            animation: fadeInText 1.5s 0.5s forwards;
+            font-size: 16px;
+            line-height: 1.5;
+            color: #6c757d;
+        }
+
+        @keyframes fadeInText {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .education-card-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+            margin-top: 50px;
+            margin-bottom: 10px;
+        }
+
+        .education-card-icon {
+            font-size: 40px;
+            color: #007bff;
+            margin-bottom: 15px;
+        }
+
+        .education-section {
+            position: relative;
+            background: #eef2f7;
+            padding: 60px 0;
+        }
+
+        .education-section:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://source.unsplash.com/1600x900/?education') no-repeat center center;
+            background-size: cover;
+            opacity: 0.1;
+            z-index: -1;
+        }
+
+        .education-header {
+            text-align: center;
+            color: #fff;
+            background-color: #007bff;
+            padding: 60px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Portföyüm</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Ana Sayfa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">Hakkımda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Hizmetlerim</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="education.html">Eğitim</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="skills.html">Yeteneklerim</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">İletişim</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Eğitim Başlık -->
+    <header class="education-header">
+        <h1 class="education-title">Eğitimim</h1>
+        <p class="lead">Eğitim hayatım boyunca edindiğim akademik ve teknik bilgilerin yanı sıra,
+             çeşitli online platformlardan aldığım kurslar ile yetkinliğimi pekiştirdim.
+              Bu süreçlere dair detaylı bilgiler aşağıda listelenmiştir.</p>
+    </header>
+
+    <!-- Eğitim İçeriği -->
+    <section class="container py-5 education-section">
+        <div class="education-card-container">
+            <!-- Üniversite -->
+            <div class="col-md-4">
+                <div class="education-card p-4">
+                    <div class="education-card-icon">
+                        <i class="bi bi-mortarboard"></i>
+                    </div>
+                    <h3 class="education-title">Lise</h3>
+                    <p class="education-description">Lise eğitimim süresince yazılım geliştirme ve bilgisayar
+                         bilimleri alanında hem teorik hem pratik bilgiler edindim. Nesne yönelimli programlama,
+                          veri yapıları, web ve masaüstü uygulamaları geliştirme gibi konular üzerine çalıştım.
+                           Aynı zamanda grup projelerinde aktif rol alarak gerçek dünya yazılım geliştirme
+                            süreçlerini deneyimleme fırsatı buldum.</p>
+                </div>
+            </div>
+
+            <!-- Online Kurs -->
+            <div class="col-md-4">
+                <div class="education-card p-4">
+                    <div class="education-card-icon">
+                        <i class="bi bi-laptop"></i>
+                    </div>
+                    <h3 class="education-title">Online Kurslar</h3>
+                    <p class="education-description"> Yazılım geliştirme ve web tasarımı konularında kendimi 
+                        sürekli geliştirmek adına çeşitli online platformlardan sertifikalı eğitimler aldım.
+                         HTML5, CSS3, JavaScript, Bootstrap, Python ve Git gibi konulara odaklandım. Bu eğitimler 
+                         sayesinde hem teknik bilgilerimi derinleştirdim hem de projeler geliştirerek portföy 
+                         oluşturmaya başladım.</p>
+                </div>
+            </div>
+
+            <!-- Sertifikalar -->
+            <div class="col-md-4">
+                <div class="education-card p-4">
+                    <div class="education-card-icon">
+                        <i class="bi bi-award"></i>
+                    </div>
+                    <h3 class="education-title">Sertifikalar</h3>
+                    <p class="education-description">Aldığım çeşitli sertifikalarla profesyonel becerilerimi geliştirdim. Web geliştirme, SEO ve diğer alanlarda yetkinlik kazandım.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center py-4 bg-dark text-white">
+        <p>© 2025 Salih Efe - Tüm Hakları Saklıdır.</p>
+    </footer>
+
+    <!-- Bootstrap JS ve Bağımlılıkları -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+</body>
+
+</html>

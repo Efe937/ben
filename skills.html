@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yeteneklerim - Portföyüm</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .skills-header {
+            background: #007bff;
+            color: white;
+            text-align: center;
+            padding: 100px 0;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .skills-header h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .skills-header p {
+            font-size: 20px;
+        }
+
+        .skills-content {
+            margin-top: 50px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .skill-card {
+            background: #fff;
+            margin-bottom: 35px;
+            padding: 30px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: transform 0.3s ease;
+        }
+
+        .skill-card h4 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .skill-card p {
+            font-size: 16px;
+            color: #6c757d;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Portföyüm</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Ana Sayfa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">Hakkımda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="skills.html">Yeteneklerim</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Hizmetlerim</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="education.html">Eğitim</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">İletişim</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Yetenekler Başlık -->
+    <header class="skills-header">
+        <h1>Yeteneklerim</h1>
+        <p>Yazılım geliştirme ve problem çözme konularında kendimi sürekli geliştirmekteyim.</p>
+    </header>
+
+    <!-- Yetenekler İçeriği -->
+    <section class="container skills-content">
+        <div class="skill-card">
+            <h4>HTML5</h4>
+            <p>HTML5, modern web sayfaları için temel yapı taşlarını sunar. Web uygulamaları ve sitelerinin temelini oluşturur.</p>
+        </div>
+        <div class="skill-card">
+            <h4>CSS3</h4>
+            <p>CSS3 ile şık ve duyarlı (responsive) web tasarımları yapabiliyorum. Animasyonlar ve geçişler ile kullanıcı deneyimi sağlıyorum.</p>
+        </div>
+        <div class="skill-card">
+            <h4>JavaScript</h4>
+            <p>JavaScript ile dinamik web sayfaları oluşturuyorum. Asenkron işlemler, API entegrasyonları ve etkileşimli uygulamalar geliştiriyorum.</p>
+        </div>
+        <div class="skill-card">
+            <h4>Python</h4>
+            <p>Python ile güçlü ve esnek Web sistemleri geliştiriyorum. popüler framework'lerle uygulamalar inşa ediyorum.</p>
+        </div>
+        <div class="skill-card">
+            <h4>C#</h4>
+            <p>C# ile masaüstü uygulamaları ve web servisleri (ASP.NET) geliştiriyorum. Modern yazılım çözümleri için güçlü bir dil.</p>
+        </div>
+        <div class="skill-card">
+            <h4>MySQL</h4>
+            <p>Veritabanı yönetim sistemleri arasında MySQL deneyimim var. Web uygulamaları için veritabanı tasarımı ve sorgulama yapabiliyorum.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center py-4 bg-dark text-white">
+        <p>© 2025 Salih Efe - Tüm Hakları Saklıdır.</p>
+    </footer>
+
+    <!-- jQuery ve Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+    <!-- jQuery Animasyonları -->
+    <script>
+        $(document).ready(function () {
+            // Yetenek kartlarının animasyonu
+            $('.skill-card').each(function (index) {
+                $(this).delay(index * 300).animate({
+                    opacity: 1,
+                    transform: 'translateY(-10)'
+                }, 1000);
+            });
+
+            // Skill Card Hover Efekti
+            $('.skill-card').hover(function () {
+                $(this).css({
+                    transform: 'translateY(-30px)',
+                    boxShadow: '0 6px 18px rgba(0, 0, 0, 0.15)'
+                });
+            }, function () {
+                $(this).css({
+                    transform: 'translateY(0)',
+                    boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)'
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

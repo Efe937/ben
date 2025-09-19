@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hakkımda - Portföyüm</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+    /* Genel font ve renk düzeni */
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f4f6f8;
+        color: #333;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* About Header */
+    .about-header {
+        background: #0056b3; /* Daha koyu mavi */
+        color: #fff;
+        text-align: center;
+        padding: 80px 20px;
+        box-shadow: 0 4px 12px rgba(0, 86, 179, 0.3);
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+    }
+
+    .about-header h1 {
+        font-weight: 800;
+        font-size: 3rem;
+        margin-bottom: 15px;
+        letter-spacing: 1.2px;
+    }
+
+    .about-header p {
+        font-size: 1.3rem;
+        max-width: 700px;
+        margin: 0 auto;
+        line-height: 1.8;
+        font-weight: 500;
+        letter-spacing: 0.05em;
+    }
+
+    /* About Content Container */
+    .about-content {
+        max-width: 900px;
+        margin: 50px auto 100px;
+        text-align: center;
+        padding: 0 15px;
+    }
+
+    /* Profil Resmi */
+    .about-content img {
+        border-radius: 50%;
+        width: 220px;
+        height: 220px;
+        object-fit: cover;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+        margin-bottom: 35px;
+        cursor: pointer;
+    }
+
+    .about-content img:hover {
+        transform: scale(1.15);
+        box-shadow: 0 20px 40px rgba(0, 212, 255, 1);
+    }
+
+    /* Bio Paragraf */
+    .bio {
+        font-size: 1.15rem;
+        max-width: 650px;
+        margin: 0 auto 40px;
+        color: #444;
+        font-weight: 500;
+        line-height: 1.7;
+        letter-spacing: 0.03em;
+    }
+
+    /* Liste */
+    .about-content ul {
+        list-style: none;
+        padding: 0;
+        max-width: 450px;
+        margin: 0 auto 50px;
+        text-align: left;
+        border-left: 3px solid #0056b3;
+    }
+
+    .about-content li {
+        font-size: 1.1rem;
+        margin: 15px 20px;
+        color: #555;
+        padding-left: 15px;
+        position: relative;
+        font-weight: 500;
+    }
+
+    /* Liste işareti (custom bullet) */
+    .about-content li::before {
+        content: '✔';
+        color: #0056b3;
+        position: absolute;
+        left: 0;
+        font-weight: 900;
+        font-size: 1.2rem;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    /* Buton */
+    .btn-primary {
+        background-color: #0056b3;
+        border-color: #0056b3;
+        padding: 12px 30px;
+        font-size: 1.1rem;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+        font-weight: 600;
+        box-shadow: 0 4px 8px rgba(0, 86, 179, 0.2);
+    }
+
+    .btn-primary:hover {
+        background-color: #003d80;
+        border-color: #003d80;
+        box-shadow: 0 6px 15px rgba(0, 61, 128, 0.35);
+        transform: translateY(-3px);
+    }
+
+    /* Footer */
+    footer {
+        background: #222;
+        color: #ccc;
+        padding: 30px 10px;
+        font-size: 0.95rem;
+        letter-spacing: 0.04em;
+        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Responsive */
+    @media(max-width: 768px) {
+        .about-header h1 {
+            font-size: 2.4rem;
+        }
+
+        .about-header p {
+            font-size: 1rem;
+            padding: 0 10px;
+        }
+
+        .about-content img {
+            width: 170px;
+            height: 170px;
+            margin-bottom: 25px;
+        }
+
+        .bio {
+            font-size: 1rem;
+            max-width: 100%;
+        }
+
+        .about-content ul {
+            max-width: 100%;
+        }
+    }
+</style>
+
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Portföyüm</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Ana Sayfa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="about.html">Hakkımda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Hizmetlerim</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="skills.html">Yeteneklerim</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="education.html">Eğitim</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">İletişim</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hakkımda Başlık -->
+    <header class="about-header">
+        <h1>Hakkımda</h1>
+        <p>Web geliştirme alanına olan tutkumla bu yola çıktım ve her geçen gün kendimi daha da geliştirerek
+            öğrenme sürecimi kesintisiz sürdürüyorum. Teknolojinin sürekli değişen dinamiklerini yakından takip ederek,
+            hem teknik becerilerimi hem de problem çözme yeteneğimi güçlendirmeye odaklanıyorum.</p>
+    </header>
+
+    <!-- Hakkımda İçerik -->
+    <section class="container about-content">
+        <img src="img/proje.jpeg" alt="Profil Resmi" class="fade-in">
+        <div class="bio">
+            <p>Merhaba! Ben Salih Efe, bir web geliştiricisiyim. HTML, CSS, JavaScript gibi teknolojilerde uzmanım ve
+                aynı zamanda tasarım konusunda da deneyimim var. Sürekli öğreniyor ve kendimi geliştiriyorum.</p>
+        </div>
+        <ul>
+            <li><strong>Ad-Soyad:</strong> Salih Efe Şimşek</li>
+            <li><strong>Doğum Tarihi:</strong> 6 Haziran 2008</li>
+            <li><strong>Konum:</strong> İstanbul, Türkiye</li>
+            <li><strong>Telefon:</strong> +90 536 260 5482</li>
+            <li><strong>E-mail:</strong> efe74148@gmail.com</li>
+        </ul>
+        <a href="contact.html" class="btn btn-primary">İletişime Geç</a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center py-4 bg-dark text-white">
+        <p>© 2025 Salih Efe - Tüm Hakları Saklıdır.</p>
+    </footer>
+
+    <!-- jQuery ve Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        // Başlık ve paragraf giriş animasyonu (yukarıdan kayarak)
+        $('.about-header h1').css({ opacity: 0, top: "40px", position: "relative" }).animate({ opacity: 1, top: "0" }, 1100);
+        $('.about-header p').css({ opacity: 0, top: "40px", position: "relative" }).delay(500).animate({ opacity: 1, top: "0" }, 1100);
+
+        // Profil resmi bounce ile görünür
+        const $img = $('img.fade-in');
+        $img.css({ opacity: 0, top: "-120px", position: "relative" }).delay(900).animate({ opacity: 1, top: "0" }, {
+            duration: 900,
+            easing: 'swing',
+            complete: function () {
+                $img.animate({ top: "-20px" }, 250).animate({ top: "0" }, 250);
+            }
+        });
+
+        // Bio yandan kayarak gelir
+        $('.bio').css({ opacity: 0, left: "-60px", position: "relative" }).delay(1400).animate({ opacity: 1, left: "0" }, 850);
+
+        // Liste maddeleri tek tek soldan kayarak fade-in
+        $('ul li').css({ opacity: 0, left: "-40px", position: "relative" }).each(function (i) {
+            $(this).delay(1600 + i * 300).animate({ opacity: 1, left: "0" }, 700);
+        });
+
+        // Butona tıklanınca küçük "zıplama" animasyonu
+        $('.btn-primary').on('click', function (e) {
+            e.preventDefault();
+            $(this).animate({ paddingTop: '5px' }, 120)
+                   .animate({ paddingTop: '12px' }, 120, function () {
+                       window.location.href = $(e.target).attr('href');
+                   });
+        });
+
+        // Footer scroll ile görünür
+        $('footer').css('opacity', 0);
+        $(window).on('scroll', function () {
+            let scrollBottom = $(window).scrollTop() + $(window).height();
+            let footerTop = $('footer').offset().top;
+
+            if (scrollBottom > footerTop - 120) {
+                $('footer').not('.animated').addClass('animated').animate({ opacity: 1 }, 1300);
+            }
+        });
+    });
+</script>
+
+
+</body>
+
+</html>
