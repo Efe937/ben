@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="tr">
 <head>
     <meta charset="UTF-8" />
@@ -101,6 +101,11 @@
                     <li class="nav-item"><a class="nav-link" href="education.html">Eğitim</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">İletişim</a></li>
                 </ul>
+                <!-- Yeni: Navbar Search Form -->
+                <form class="d-flex ms-3" role="search">
+                    <input class="form-control form-control-sm me-2" type="search" placeholder="Ara" aria-label="Ara">
+                    <button class="btn btn-outline-light btn-sm" type="submit">Ara</button>
+                </form>
             </div>
         </div>
     </nav>
@@ -214,22 +219,159 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer id="contact">
-        <p>&copy; 2025 Salih Efe. Tüm hakları saklıdır.</p>
-    </footer>
+    <!-- Spinner (Yükleniyor) -->
+    <section class="container text-center my-5">
+        <h2 class="mb-4">Yükleniyor...</h2>
+        <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">Yükleniyor...</span>
+        </div>
+    </section>
 
-    <!-- Bootstrap JS ve Tooltip Başlatma -->
+    <!-- Ek Bootstrap Öğeleri -->
+
+    <section class="container my-5">
+        <h2 class="text-center mb-4">Uyarılar ve Rozetler</h2>
+
+        <!-- Alert -->
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <strong>Dikkat!</strong> Bu bir uyarı mesajıdır.
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Kapat"></button>
+        </div>
+
+        <!-- Badges -->
+        <h5>Rozetler:</h5>
+        <span class="badge bg-primary me-1">Yeni</span>
+        <span class="badge bg-success me-1">Başarılı</span>
+        <span class="badge bg-danger me-1">Hata</span>
+        <span class="badge bg-info">Bilgi</span>
+    </section>
+
+    <section class="container my-5">
+        <h2 class="text-center mb-4">Kartlar ve Liste Grupları</h2>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-header">Öne Çıkan</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Bootstrap Kartı</h5>
+                        <p class="card-text">Liste gruplarıyla desteklenmiş şık bir kart örneği.</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">İlk madde</li>
+                        <li class="list-group-item">İkinci madde</li>
+                        <li class="list-group-item">Üçüncü madde</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 text-bg-primary">
+                    <div class="card-header">Bilgilendirme</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Renkli Kart</h5>
+                        <p class="card-text">Bootstrap 5 renk sınıflarıyla stillendirilmiş kart.</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Bilgi 1</li>
+                        <li class="list-group-item">Bilgi 2</li>
+                        <li class="list-group-item">Bilgi 3</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 text-bg-success">
+                    <div class="card-header">Başarı</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Yeşil Kart</h5>
+                        <p class="card-text">Başarı temalı kart örneği.</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Madde A</li>
+                        <li class="list-group-item">Madde B</li>
+                        <li class="list-group-item">Madde C</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container my-5">
+        <h2 class="text-center mb-4">Sayfalama ve Breadcrumb</h2>
+
+        <!-- Pagination -->
+        <nav aria-label="Sayfalama örneği">
+            <ul class="pagination justify-content-center">
+                <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1">Önceki</a></li>
+                <li class="page-item active" aria-current="page"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">Sonraki</a></li>
+            </ul>
+        </nav>
+
+        <!-- Breadcrumb -->
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb justify-content-center">
+                <li class="breadcrumb-item"><a href="#">Ana Sayfa</a></li>
+                <li class="breadcrumb-item"><a href="#">Kategoriler</a></li>
+                <li class="breadcrumb-item active" aria-current="page">İletişim</li>
+            </ol>
+        </nav>
+
+        <!-- Table -->
+        <div class="table-responsive">
+            <table class="table table-striped table-bordered align-middle">
+                <thead class="table-primary">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">İsim</th>
+                        <th scope="col">Pozisyon</th>
+                        <th scope="col">Şirket</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Salih</td>
+                        <td>Frontend Developer</td>
+                        <td>Acme Inc.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Efe</td>
+                        <td>Backend Developer</td>
+                        <td>Tech Ltd.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Ayşe</td>
+                        <td>Project Manager</td>
+                        <td>Globex Corp.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Bootstrap ve JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        // Toast Başlatma
-        var toastEl = document.getElementById('myToast');
-        var toast = new bootstrap.Toast(toastEl);
-
-        // Toast Button
-        document.getElementById('showToastButton').addEventListener('click', function() {
-            toast.show();
+        // Spinner 2 saniye sonra kaybolacak
+        window.addEventListener('DOMContentLoaded', () => {
+            const spinnerSection = document.querySelector('section.container.text-center.my-5');
+            setTimeout(() => {
+                spinnerSection.style.display = 'none';
+            }, 2000);
         });
+
+        // Toast gösterme fonksiyonu
+        const toastTrigger = document.getElementById('showToastButton');
+        const toastElement = document.getElementById('myToast');
+        if (toastTrigger) {
+            toastTrigger.addEventListener('click', () => {
+                const toast = new bootstrap.Toast(toastElement);
+                toast.show();
+            });
+        }
     </script>
 </body>
 </html>
